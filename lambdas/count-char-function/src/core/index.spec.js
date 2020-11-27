@@ -1,32 +1,33 @@
 const countChar = require('./index');
 
 describe('countChar', () => {
+  const makeSut = () => {
+    const inputString = 'Any value 123';
+    const sut = countChar;
+
+    return { inputString, sut };
+  };
+
   it('should return an object with the values', () => {
-    const inputString = 'Any string 1234';
-    expect(countChar(inputString)).toBeInstanceOf(Object);
+    const { sut, inputString } = makeSut();
+    expect(sut(inputString)).toBeInstanceOf(Object);
   });
 
   it('should add one more count to keys that already exists', () => {
-    const inputString = 'aaa';
-    const expected = { a: 3 };
-    expect(JSON.stringify(countChar(inputString))).toBe(
-      JSON.stringify(expected)
-    );
+    const { sut, inputString } = makeSut();
+    const expected = { a: 2 };
+    expect(sut(inputString)).toMatchObject(expected);
   });
 
   it('should not have any uppercase values', () => {
-    const inputString = 'ANY any';
-    const expected = { a: 2, n: 2, y: 2 };
-    expect(JSON.stringify(countChar(inputString))).toBe(
-      JSON.stringify(expected)
-    );
+    const { sut, inputString } = makeSut();
+    const expected = { A: 1 };
+    expect(sut(inputString)).not.toMatchObject(expected);
   });
 
   it('should not have spaces', () => {
-    const inputString = 'ANY any';
+    const { sut, inputString } = makeSut();
     const expected = { ' ': 1 };
-    expect(JSON.stringify(countChar(inputString))).not.toContain(
-      JSON.stringify(expected)
-    );
+    expect(sut(inputString)).not.toMatchObject(expected);
   });
 });
