@@ -1,0 +1,14 @@
+{
+  "name": "count-char",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/core/index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --config=.eslintrc.json src/**/*.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
