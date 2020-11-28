@@ -2,7 +2,7 @@ const countChar = require('./index');
 
 describe('countChar', () => {
   const makeSut = () => {
-    const inputString = 'Any value 123';
+    const inputString = 'Any value 123 @.,';
     const sut = countChar;
 
     return { inputString, sut };
@@ -25,9 +25,14 @@ describe('countChar', () => {
     expect(sut(inputString)).not.toMatchObject(expected);
   });
 
-  it('should not have spaces', () => {
+  it('should not have spaces and special characters', () => {
     const { sut, inputString } = makeSut();
-    const expected = { ' ': 1 };
+    const expected = {
+      ' ': 3,
+      '.': 1,
+      ',': 1,
+      '@': 1,
+    };
     expect(sut(inputString)).not.toMatchObject(expected);
   });
 });
