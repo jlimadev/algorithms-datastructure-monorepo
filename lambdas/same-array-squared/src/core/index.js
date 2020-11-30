@@ -1,3 +1,9 @@
+/**
+ * This function must return true if values in the array has it's ...
+ * ... corresponding value squared in the 2nd array. The order of the values is not important.
+ * Should return false if the array is empty or has different sizes.
+ */
+
 const sameArraySquared = (firstArray, secondArray) => {
   if (firstArray.length === 0 || secondArray.length === 0) {
     return false;
