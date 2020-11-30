@@ -7,17 +7,13 @@
 const countChar = (inputString) => {
   const object = {};
   const inputArray = inputString.split('');
-  const isAlphaNumeric = (char) => /[a-z0-9]/.test(char);
+  const isAlphaNumeric = (char) => /[a-zA-Z0-9]/.test(char);
 
   inputArray.forEach((input) => {
-    const char = input.toLowerCase();
-
+    let char = input;
     if (isAlphaNumeric(char)) {
-      if (object[char] > 0) {
-        object[char] += 1;
-      } else {
-        object[char] = 1;
-      }
+      char = char.toLowerCase();
+      object[char] = object[char] + 1 || 1;
     }
   });
 
