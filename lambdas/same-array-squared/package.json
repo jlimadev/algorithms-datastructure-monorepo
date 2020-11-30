@@ -1,0 +1,14 @@
+{
+  "name": "same-array-squared",
+  "version": "1.0.0",
+  "main": "src/core/index.js",
+  "description": "The function should return true if every value in the array has it's corresponding value squared in the second array",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --config=.eslintrc.json src/**/*.js"
+  },
+  "author": "Jonathan Lima",
+  "license": "MIT"
+}
