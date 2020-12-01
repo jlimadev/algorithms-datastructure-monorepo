@@ -1,5 +1,5 @@
 {
-  "name": "same-array-squared",
+  "name": "same-array-squared-function",
   "version": "1.0.0",
   "main": "src/core/index.js",
   "description": "The function should return true if every value in the array has it's corresponding value squared in the second array",

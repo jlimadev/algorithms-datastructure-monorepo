@@ -1,5 +1,5 @@
 {
-  "name": "anagram-function",
+  "name": "anagrams-function",
   "version": "1.0.0",
   "main": "src/core/index.js",
   "dependencies": {},
