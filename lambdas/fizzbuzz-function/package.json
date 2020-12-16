@@ -1,7 +1,6 @@
 {
-  "name": "count-char-function",
+  "name": "fizzbuzz-function",
   "version": "1.0.0",
-  "description": "",
   "main": "src/core/index.js",
   "dependencies": {},
   "devDependencies": {},
@@ -9,6 +8,6 @@
     "test": "jest",
     "lint": "eslint --config=.eslintrc.json src/**/*.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Jonathan Lima",
+  "license": "MIT"
 }

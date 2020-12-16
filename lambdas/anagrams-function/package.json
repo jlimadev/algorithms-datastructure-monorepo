@@ -1,0 +1,13 @@
+{
+  "name": "anagrams-function",
+  "version": "1.0.0",
+  "main": "src/core/index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --config=.eslintrc.json src/**/*.js"
+  },
+  "author": "Jonathan Lima",
+  "license": "MIT"
+}
