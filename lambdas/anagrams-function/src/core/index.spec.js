@@ -15,15 +15,15 @@ describe('anagram', () => {
     expect(sut(firstString, invalidString)).toBe(false);
   });
 
-  it('should return true if strings are equals', () => {
-    const { sut, firstString } = makeSut();
-    expect(sut(firstString, firstString)).toBe(true);
-  });
-
   it('should return true if strings are not anagrams (but have same size)', () => {
     const { sut, firstString } = makeSut();
     const invalidString = 'car';
     expect(sut(firstString, invalidString)).toBe(false);
+  });
+
+  it('should return true if strings are equals', () => {
+    const { sut, firstString } = makeSut();
+    expect(sut(firstString, firstString)).toBe(true);
   });
 
   it('should return true if strings are anagrams', () => {

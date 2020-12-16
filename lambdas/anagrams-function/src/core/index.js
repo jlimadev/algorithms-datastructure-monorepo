@@ -18,7 +18,7 @@ const anagram = (firstString, secondString) => {
   });
 
   return secondString.split('').every((char) => {
-    if (!lookup[char]) {
+    if (!lookup[char] || lookup[char] === 0) {
       return false;
     }
 
