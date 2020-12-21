@@ -6,7 +6,9 @@
   "devDependencies": {},
   "scripts": {
     "test": "jest",
-    "lint": "eslint --config=.eslintrc.json src/**/*.js"
+    "lint": "eslint --config=.eslintrc.json src/**/*.js",
+    "husky:lint": "yarn install && yarn lint",
+    "husky:test": "yarn install && yarn test:silent"
   },
   "author": "Jonathan Lima",
   "license": "MIT"
