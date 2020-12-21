@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "pre-commit": "npx lerna run lint",
+    "pre-push": "npx lerna run test"
+  }
+}
