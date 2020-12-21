@@ -1,0 +1,15 @@
+{
+  "name": "remove-duplicates-function",
+  "version": "1.0.0",
+  "description": "must remove duplicate characters from string",
+  "main": "src/core/index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "lint": "eslint --config=.eslintrc.json src/**/*.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
