@@ -13,4 +13,10 @@ const removeDuplicates = (str) => {
   return returnValue;
 };
 
-module.exports = removeDuplicates;
+const removeDuplicatesWithSet = (str) => {
+  const set = new Set(str); // returns an object
+  const arrayFromSet = Array.from(set); // creates an array
+  return arrayFromSet.join(''); // returns a string
+};
+
+module.exports = { removeDuplicates, removeDuplicatesWithSet };
