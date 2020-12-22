@@ -58,7 +58,7 @@ This repo uses `Husky` to guarantee the `commit` and `push` quality
 
 Before any commit, the `husky` will run a `lint` check and before any `push` it will run a `test` check
 
-Be sure to add the following scripts to our lambdas and layers
+Be sure to add the following scripts to the lambdas/functions and layers
 
 ```
   "husky:lint": "npx yarn install && yarn lint",
