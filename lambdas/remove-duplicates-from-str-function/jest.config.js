@@ -14,7 +14,7 @@ module.exports = {
 
   collectCoverage: true,
   collectCoverageFrom: [
-    'src/**/*.spec.js',
+    'src/**/*.js',
     '!**/jest.config.js',
     '!src/**/debug.js',
   ],
