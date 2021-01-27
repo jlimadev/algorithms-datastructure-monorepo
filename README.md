@@ -53,6 +53,7 @@ Before any commit, the `husky` will run a `lint` check and before any `push` it 
 
 Be sure to add the following scripts to the functions
 
+
 ```
   "husky:lint": "npx yarn install && yarn lint",
   "husky:test": "npx yarn install && yarn test:silent"
