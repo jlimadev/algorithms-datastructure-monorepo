@@ -26,7 +26,7 @@ const asyncFunctions = ({ getUser, getPhone, getAddress }) => async (
 
     return returnObject;
   } catch (error) {
-    throw error;
+    throw Error(error);
   }
 };
 

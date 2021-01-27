@@ -33,7 +33,9 @@ const makeSut = () => {
   };
 
   const sut = asyncFunctions;
-  return { sut, deps, responses, name };
+  return {
+    sut, deps, responses, name,
+  };
 };
 
 describe('asyncFunctions', () => {
@@ -43,13 +45,17 @@ describe('asyncFunctions', () => {
   });
 
   it('Should fail if call without a userId on phone', async () => {
-    const { sut, deps, name, responses } = makeSut();
+    const {
+      sut, deps, name, responses,
+    } = makeSut();
     responses.user.id = undefined;
     await expect(sut(deps)(name)).rejects.toThrow('You must inform the userId');
   });
 
   it('Should return a complete response', async () => {
-    const { sut, deps, name, responses } = makeSut();
+    const {
+      sut, deps, name, responses,
+    } = makeSut();
     await expect(sut(deps)(name)).resolves.toEqual(responses);
   });
 });
