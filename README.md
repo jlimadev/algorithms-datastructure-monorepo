@@ -34,23 +34,16 @@ lerna add logging
 
 ## Lambda Folder
 
-This folder contains all functions/lambdas used in this project.
+This folder contains all functions used in this project.
 Each Lambda should follow this structure:
 
 ```
 
 └ .vscode → VSCode configuration to debug
-└ src → core → Lambda code
+└ src → core → Functions code
 ```
 
 You can copy the structure from the samples.
-
-## Layers Folder
-
-This folder contains the libs that are used across the lambdas for example the logger lib that should be used to log stuff.
-It´s very important to use these resources instead of importing a different lib into this project since you let this repo easy to maintain.
-
-Note: These libs were made in a 'layer' format, so if we want to migrate to lambda layers it will be easy.
 
 ## Husky
 
@@ -58,7 +51,7 @@ This repo uses `Husky` to guarantee the `commit` and `push` quality
 
 Before any commit, the `husky` will run a `lint` check and before any `push` it will run a `test` check
 
-Be sure to add the following scripts to our lambdas and layers
+Be sure to add the following scripts to the functions
 
 ```
   "husky:lint": "npx yarn install && yarn lint",
