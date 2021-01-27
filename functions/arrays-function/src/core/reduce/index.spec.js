@@ -1,13 +1,13 @@
 const reduceFunction = require('./index');
 
+const makeSut = () => {
+  const anyArray = [1, 2, 3, 4, 'j'];
+  const sut = reduceFunction;
+
+  return { sut, anyArray };
+};
+
 describe('reduceFunction', () => {
-  const makeSut = () => {
-    const anyArray = [1, 2, 3, 4, 'j'];
-    const sut = reduceFunction;
-
-    return { sut, anyArray };
-  };
-
   it('should return an number, no matter the array', () => {
     const { sut, anyArray } = makeSut();
     expect(sut(anyArray)).toEqual(expect.any(Number));

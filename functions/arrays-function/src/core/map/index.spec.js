@@ -1,13 +1,13 @@
 const mapFunction = require('./index');
 
+const makeSut = () => {
+  const anyArray = [1, 2, 3, 4, 'j'];
+  const sut = mapFunction;
+
+  return { sut, anyArray };
+};
+
 describe('mapFunction', () => {
-  const makeSut = () => {
-    const anyArray = [1, 2, 3, 4, 'j'];
-    const sut = mapFunction;
-
-    return { sut, anyArray };
-  };
-
   it('should return an object with the values', () => {
     const { sut, anyArray } = makeSut();
     expect(sut(anyArray)).toBeInstanceOf(Object);

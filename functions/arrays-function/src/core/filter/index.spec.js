@@ -1,13 +1,13 @@
 const filterFunction = require('./index');
 
+const makeSut = () => {
+  const anyArray = [1, 2, 3, 4, 'j'];
+  const sut = filterFunction;
+
+  return { sut, anyArray };
+};
+
 describe('filterFunction', () => {
-  const makeSut = () => {
-    const anyArray = [1, 2, 3, 4, 'j'];
-    const sut = filterFunction;
-
-    return { sut, anyArray };
-  };
-
   it('should return an object with the values', () => {
     const { sut, anyArray } = makeSut();
     expect(sut(anyArray)).toBeInstanceOf(Object);

@@ -1,14 +1,14 @@
 const sameArraySquared = require('./index');
 
+const makeSut = () => {
+  const sut = sameArraySquared;
+  const firstArray = [1, 2, 3];
+  const secondArray = [1, 9, 4];
+
+  return { sut, firstArray, secondArray };
+};
+
 describe('sameArraySquared', () => {
-  const makeSut = () => {
-    const sut = sameArraySquared;
-    const firstArray = [1, 2, 3];
-    const secondArray = [1, 9, 4];
-
-    return { sut, firstArray, secondArray };
-  };
-
   it('Should return false with empty arrays', () => {
     const { sut } = makeSut();
     expect(sut([], [])).toBe(false);
