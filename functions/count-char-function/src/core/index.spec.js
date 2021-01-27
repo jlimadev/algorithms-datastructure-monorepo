@@ -1,13 +1,13 @@
 const countChar = require('./index');
 
+const makeSut = () => {
+  const inputString = 'Any value 123 @.,';
+  const sut = countChar;
+
+  return { inputString, sut };
+};
+
 describe('countChar', () => {
-  const makeSut = () => {
-    const inputString = 'Any value 123 @.,';
-    const sut = countChar;
-
-    return { inputString, sut };
-  };
-
   it('should return an object with the values', () => {
     const { sut, inputString } = makeSut();
     expect(sut(inputString)).toBeInstanceOf(Object);

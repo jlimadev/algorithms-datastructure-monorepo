@@ -1,14 +1,14 @@
 const anagram = require('./index');
 
+const makeSut = () => {
+  const firstString = 'any';
+  const secondString = 'nay';
+  const sut = anagram;
+
+  return { sut, firstString, secondString };
+};
+
 describe('anagram', () => {
-  const makeSut = () => {
-    const firstString = 'any';
-    const secondString = 'nay';
-    const sut = anagram;
-
-    return { sut, firstString, secondString };
-  };
-
   it('should return false if strings have different sizes', () => {
     const { sut, firstString } = makeSut();
     const invalidString = 'any bigger string';
