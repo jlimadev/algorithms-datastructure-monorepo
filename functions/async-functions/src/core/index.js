@@ -1,4 +1,4 @@
-const asyncFunctions = ({ getUser, getPhone, getAddress }) => async (
+const userAsyncFn = ({ getUser, getPhone, getAddress }) => async (
   inputName,
 ) => {
   if (!inputName) {
@@ -30,4 +30,4 @@ const asyncFunctions = ({ getUser, getPhone, getAddress }) => async (
   }
 };
 
-module.exports = asyncFunctions;
+module.exports = userAsyncFn;

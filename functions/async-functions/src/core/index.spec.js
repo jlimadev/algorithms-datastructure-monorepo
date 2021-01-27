@@ -1,4 +1,4 @@
-const asyncFunctions = require('./index');
+const userAsyncFn = require('./index');
 
 const makeSut = () => {
   const userId = 'ffaa43ad-e7d4-4509-a7bf-686ac1ef74e4';
@@ -32,13 +32,16 @@ const makeSut = () => {
     getAddress,
   };
 
-  const sut = asyncFunctions;
+  const sut = userAsyncFn;
   return {
-    sut, deps, responses, name,
+    sut,
+    deps,
+    responses,
+    name,
   };
 };
 
-describe('asyncFunctions', () => {
+describe('userAsyncFn', () => {
   it('Should fail if call without a name', async () => {
     const { sut, deps } = makeSut();
     await expect(sut(deps)()).rejects.toThrow('You must inform the name');
