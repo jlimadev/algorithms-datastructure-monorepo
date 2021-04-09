@@ -1,33 +1,40 @@
-const fizzbuzz = require('./index');
+const fn = require('./index');
+
+const spy = jest.spyOn(fn, 'fizzbuzz');
 
 describe('FizzBuzz function test', () => {
+  beforeEach(() => {
+    spy.mockClear();
+  });
+
   it('Should return the input number if is not multiple of 3 or 5', () => {
-    const anyNumber = 2;
-    const expected = fizzbuzz(anyNumber);
-    expect(expected).toBe(anyNumber);
+    const inputNumber = 2;
+    const result = fn.fizzbuzz(inputNumber);
+    expect(result).toBe(inputNumber);
+    expect(spy).toHaveBeenCalledWith(inputNumber);
   });
-
   it('Should return the input number if is not multiple of 3 or 5, zero case', () => {
-    const anyNumber = 0;
-    const expected = fizzbuzz(anyNumber);
-    expect(expected).toBe(anyNumber);
+    const inputNumber = 0;
+    const result = fn.fizzbuzz(inputNumber);
+    expect(result).toBe(inputNumber);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
-
   it('Should return fizz if input number is multiple of 3', () => {
-    const anyNumber = 3;
-    const expected = fizzbuzz(anyNumber);
-    expect(expected).toBe('fizz');
+    const inputNumber = 3;
+    const result = fn.fizzbuzz(inputNumber);
+    expect(result).toBe('fizz');
+    expect(spy).toHaveBeenCalledWith(inputNumber);
   });
-
   it('Should return buzz if input number is multiple of 5', () => {
-    const anyNumber = 5;
-    const expected = fizzbuzz(anyNumber);
-    expect(expected).toBe('buzz');
+    const inputNumber = 5;
+    const result = fn.fizzbuzz(inputNumber);
+    expect(result).toBe('buzz');
+    expect(spy).toHaveBeenCalledWith(inputNumber);
   });
-
   it('Should return fizzbuzz if input number is multiple of 3 and 5', () => {
-    const anyNumber = 15;
-    const expected = fizzbuzz(anyNumber);
-    expect(expected).toBe('fizzbuzz');
+    const inputNumber = 15;
+    const result = fn.fizzbuzz(inputNumber);
+    expect(result).toBe('fizzbuzz');
+    expect(spy).toHaveBeenCalledWith(inputNumber);
   });
 });

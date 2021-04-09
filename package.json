@@ -5,6 +5,7 @@
   "author": "Jonathan Lima",
   "private": true,
   "devDependencies": {
+    "@types/jest": "^26.0.22",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
