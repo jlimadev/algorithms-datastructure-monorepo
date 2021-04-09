@@ -20,4 +20,4 @@ const fizzbuzz = (input) => {
   return returnValue;
 };
 
-module.exports = fizzbuzz;
+module.exports = { fizzbuzz };
