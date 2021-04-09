@@ -26,13 +26,7 @@ In the folder of the package you want to install the dependency, just run
 lerna add <package_name>
 ```
 
-For example, if you want to install the logging library, just run
-
-```bash
-lerna add logging
-```
-
-## Lambda Folder
+## Functions Folder
 
 This folder contains all functions used in this project.
 Each Lambda should follow this structure:
@@ -57,7 +51,3 @@ Be sure to add the following scripts to the functions
   "husky:lint": "npx yarn install && yarn lint",
   "husky:test": "npx yarn install && yarn test:silent"
 ```
-
-## Use Yarn instead of npm
-
-To keep the package size as minimum as possible, use `yarn` instead of `npm install`.

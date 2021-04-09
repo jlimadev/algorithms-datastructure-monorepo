@@ -1,4 +1,5 @@
 const fn = require('./index');
+
 const spy = jest.spyOn(fn, 'fizzbuzz');
 
 describe('FizzBuzz function test', () => {
