@@ -1,8 +1,11 @@
-const { removeDuplicates, removeDuplicatesWithSet } = require('./index');
+const {
+  removeDuplicatesWithObject,
+  removeDuplicatesWithSet,
+} = require('./index');
 
 const makeSut = () => {
   const anyStr = 'duupppliiicaaateees';
-  const sut = removeDuplicates;
+  const sut = removeDuplicatesWithObject;
   const sutSet = removeDuplicatesWithSet;
 
   return { sut, sutSet, anyStr };

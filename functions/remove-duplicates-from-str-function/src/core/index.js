@@ -1,16 +1,11 @@
-const removeDuplicates = (str) => {
+const removeDuplicatesWithObject = (str) => {
   const object = {};
 
   str.split('').forEach((char) => {
     object[char] = object[char] + 1 || 1;
   });
 
-  let returnValue = '';
-  Object.keys(object).forEach((key) => {
-    returnValue += key;
-  });
-
-  return returnValue;
+  return Object.keys(object).join('');
 };
 
 const removeDuplicatesWithSet = (str) => {
@@ -19,4 +14,7 @@ const removeDuplicatesWithSet = (str) => {
   return arrayFromSet.join(''); // returns a string
 };
 
-module.exports = { removeDuplicates, removeDuplicatesWithSet };
+module.exports = {
+  removeDuplicatesWithObject,
+  removeDuplicatesWithSet,
+};
