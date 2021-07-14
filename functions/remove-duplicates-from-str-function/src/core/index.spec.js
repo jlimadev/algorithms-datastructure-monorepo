@@ -1,23 +1,33 @@
-const { removeDuplicates, removeDuplicatesWithSet } = require('./index');
+const {
+  removeDuplicatesWithObject,
+  removeDuplicatesWithSet,
+  removeDuplicatesWithFilter,
+} = require('./index');
 
 const makeSut = () => {
   const anyStr = 'duupppliiicaaateees';
-  const sut = removeDuplicates;
+  const sutObject = removeDuplicatesWithObject;
   const sutSet = removeDuplicatesWithSet;
+  const sutFilter = removeDuplicatesWithFilter;
 
-  return { sut, sutSet, anyStr };
+  return {
+    sutObject,
+    sutSet,
+    sutFilter,
+    anyStr,
+  };
 };
 
 describe('removeDuplicates', () => {
   it('should return an string', () => {
-    const { sut, anyStr } = makeSut();
-    expect(sut(anyStr)).toEqual(expect.any(String));
+    const { sutObject, anyStr } = makeSut();
+    expect(sutObject(anyStr)).toEqual(expect.any(String));
   });
 
   it('should return a normal string without duplicates values', () => {
-    const { sut, anyStr } = makeSut();
+    const { sutObject, anyStr } = makeSut();
     const expectedResult = 'duplicates';
-    expect(sut(anyStr)).toBe(expectedResult);
+    expect(sutObject(anyStr)).toBe(expectedResult);
   });
 });
 
@@ -31,5 +41,13 @@ describe('removeDuplicatesWithSet', () => {
     const { sutSet, anyStr } = makeSut();
     const expectedResult = 'duplicates';
     expect(sutSet(anyStr)).toBe(expectedResult);
+  });
+});
+
+describe('removeDuplicatesWithFilter', () => {
+  it('should return a normal string without duplicates values', () => {
+    const { sutFilter, anyStr } = makeSut();
+    const expectedResult = 'duplicates';
+    expect(sutFilter(anyStr)).toBe(expectedResult);
   });
 });
