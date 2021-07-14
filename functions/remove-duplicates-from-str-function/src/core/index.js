@@ -14,7 +14,15 @@ const removeDuplicatesWithSet = (str) => {
   return arrayFromSet.join(''); // returns a string
 };
 
+const removeDuplicatesWithFilter = (str) => {
+  const arrayFromStr = Array.from(str);
+  return arrayFromStr
+    .filter((it, index, self) => self.indexOf(it) === index)
+    .join('');
+};
+
 module.exports = {
   removeDuplicatesWithObject,
   removeDuplicatesWithSet,
+  removeDuplicatesWithFilter,
 };
